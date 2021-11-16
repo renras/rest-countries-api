@@ -1,0 +1,29 @@
+.country_info_footer {
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.country_info_footer p {
+  margin-top: 6px;
+  width: 150px;
+}
+
+.country_info_footer ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 75px);
+  width: 100%;
+  column-gap: 10px;
+  row-gap: 5px;
+  align-items: start;
+}
+
+.country_info_footer li {
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px 0;
+  border-radius: 2.5px;
+  background-color: var(--secondary-bg);
+  border: none;
+  box-shadow: var(--shadow);
+}

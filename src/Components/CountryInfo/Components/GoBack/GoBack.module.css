@@ -1,0 +1,20 @@
+.link {
+  text-decoration: none;
+  background-color: var(--secondary-bg);
+  align-self: flex-start;
+  padding: 7.5px;
+  width: 100px;
+  display: flex;
+  font-size: 12.5px;
+  justify-content: center;
+  align-items: center;
+  gap: 7.5px;
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  color: var(--text-white);
+}
+
+.icon {
+  font-size: 15px;
+  margin-bottom: 1px;
+}

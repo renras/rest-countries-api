@@ -1,0 +1,21 @@
+.home {
+  padding: 50px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.topOfSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.countries {
+  display: grid;
+  padding: 75px 0 20px 0;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fit, 250px);
+  gap: 50px;
+  overflow: hidden;
+}

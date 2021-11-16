@@ -1,0 +1,54 @@
+.regionAccordion {
+  font-size: 12.5px;
+  background-color: var(--main-bg);
+  color: var(--text-white);
+  letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+
+.regionHeader {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondary-bg);
+  padding: 12.5px 12.5px 12.5px 15px;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
+  align-items: center;
+  color: var(--text-white);
+  box-shadow: var(--shadow);
+}
+
+.chevronDown {
+  font-size: 10px;
+}
+
+.regionsContainer {
+  overflow: hidden;
+  position: absolute;
+  top: 50px;
+  box-shadow: var(--shadow);
+}
+
+.regionAccordion ul {
+  background-color: var(--secondary-bg);
+  list-style: none;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.regionAccordion li {
+  padding: 10px 15px;
+}
+
+.regionAccordion li:hover {
+  background-color: var(--main-bg);
+  cursor: pointer;
+}
+
+.showAccordion {
+  height: 0px;
+}

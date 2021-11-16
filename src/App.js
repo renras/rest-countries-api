@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
-function App() {
+import Navbar from "./Components/Navbar/Navbar";
+import Home from "./Components/Home/Home";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import styles from "./App.module.css";
+import CountryInfo from "./Components/CountryInfo/CountryInfo";
+import useFetch from "./AppLogic.js";
+import Error from "./Components/Error/Error";
+
+function App({ authorized }) {
+  const { status } = useFetch();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {status === "success" ? (
+        <>
+          <Router>
+            <Navbar />
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="country-info/:name" element={<CountryInfo />} />
+              <Route path="*" element={<Error />} />
+            </Routes>
+          </Router>
+        </>
+      ) : (
+        <AiOutlineLoading3Quarters className={styles.loadingIcon} />
+      )}
+    </>
   );
 }
 
