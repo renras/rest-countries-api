@@ -15,7 +15,7 @@ const Country = () => {
         return (
           <Link
             className={styles.link}
-            to={`/rest-counries-api/country-info/${country.name}`}
+            to={`/country-info/${country.name}`}
             key={index}
           >
             <SingleCountry country={country} />

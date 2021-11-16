@@ -7,7 +7,7 @@ import styles from "./GoBack.module.css";
 const GoBack = () => {
   return (
     <>
-      <Link className={styles.link} to="/rest-countries-api">
+      <Link className={styles.link} to="/">
         <BsArrowLeft className={styles.icon} />
         <p>Back</p>
       </Link>
