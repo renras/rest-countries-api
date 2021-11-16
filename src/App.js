@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
@@ -24,8 +19,11 @@ function App({ authorized }) {
           <Router>
             <Navbar />
             <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route path="country-info/:name" element={<CountryInfo />} />
+              <Route exact path="/rest-countries-api" element={<Home />} />
+              <Route
+                path="/rest-countries-api/country-info/:name"
+                element={<CountryInfo />}
+              />
               <Route path="*" element={<Error />} />
             </Routes>
           </Router>
