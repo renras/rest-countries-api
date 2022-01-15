@@ -9,7 +9,7 @@ import CountryInfo from "./Components/CountryInfo/CountryInfo";
 import useFetch from "./AppLogic.js";
 import Error from "./Components/Error/Error";
 
-function App({ authorized }) {
+function App() {
   const { status } = useFetch();
 
   return (

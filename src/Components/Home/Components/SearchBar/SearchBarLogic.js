@@ -1,14 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
-
-import { searchBarActions } from "../../../../Store/searchBarSlice";
+import { appActions } from "../../../../Store/appSlice";
 
 const useFetch = () => {
+  const text = useSelector((state) => state.app.value);
   const dispatch = useDispatch();
-  const text = useSelector((state) => state.searchBar.textInput);
 
   const handleChange = (e) => {
-    const event = e.target.value;
-    dispatch(searchBarActions.handleChange(event));
+    dispatch(appActions.updateSearchBarText(e.target.value));
   };
 
   return { text, handleChange };
