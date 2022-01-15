@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./Error.module.css";
-import GoBack from "../CountryInfo/Components/GoBack/GoBack";
+import GoBack from "../CountryInfo/GoBack";
 
 const Error = () => {
   return (

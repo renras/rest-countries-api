@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { toggleDarkModeActions } from "../../../../Store/toggleDarkModeSlice";
+import { toggleDarkModeActions } from "../../Store/toggleDarkModeSlice";
 
 const useFetch = () => {
   const dispatch = useDispatch();

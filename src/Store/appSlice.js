@@ -14,25 +14,33 @@ const appSlice = createSlice({
     status: null,
     countries: [],
     filteredCountries: [],
+    searchBarText: "",
+    borderCountries: [],
   },
   reducers: {
+    updateSearchBarText(state, action) {
+      state.searchBarText = action.payload;
+    },
     filterCountries(state, action) {
-      let { textInput, activeRegion } = action.payload;
-
+      let { searchBarText, activeRegion } = action.payload;
       let newCountries = state.countries.filter((country) => {
         return (
-          country.name.toLowerCase().includes(textInput.toLowerCase()) &&
+          country.name.toLowerCase().includes(searchBarText.toLowerCase()) &&
           country.region === activeRegion
         );
       });
-
       if (activeRegion === "Filter by Region") {
         newCountries = state.countries.filter((country) => {
-          return country.name.toLowerCase().includes(textInput.toLowerCase());
+          return country.name
+            .toLowerCase()
+            .includes(searchBarText.toLowerCase());
         });
       }
-
       state.filteredCountries = newCountries;
+    },
+    setBorderCountries(state, action) {
+      state.borderCountries = action.payload;
+      console.log(action.payload);
     },
   },
   extraReducers: {

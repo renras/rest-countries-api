@@ -2,15 +2,13 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 
-import { countryInfoActions } from "../../Store/countryInfoSlice";
+import { appActions } from "../../Store/appSlice";
 
 const useFetch = () => {
   const dispatch = useDispatch();
   const { name } = useParams();
   const countries = useSelector((state) => state.app.countries);
-  const borderCountries = useSelector(
-    (state) => state.countryInfo.borderCountries
-  );
+  const borderCountries = useSelector((state) => state.app.borderCountries);
   const currentCountry = countries.find((country) => country.name === name);
   const getCurrencies = () => {
     try {
@@ -25,10 +23,10 @@ const useFetch = () => {
       const newCountries = countries.filter((country) =>
         borders.includes(country.alpha3Code)
       );
-      dispatch(countryInfoActions.setBorderCountries(newCountries));
+      dispatch(appActions.setBorderCountries(newCountries));
     }
     if (!("borders" in currentCountry)) {
-      dispatch(countryInfoActions.setBorderCountries([]));
+      dispatch(appActions.setBorderCountries([]));
     }
   }, [dispatch, currentCountry, countries]);
 

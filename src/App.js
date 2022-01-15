@@ -2,14 +2,14 @@ import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./Components/Navbar/Navbar";
-import Home from "./Components/Home/Home";
+import Home from "./Pages/Home/Home";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import styles from "./App.module.css";
-import CountryInfo from "./Components/CountryInfo/CountryInfo";
+import CountryInfo from "./Pages/CountryInfo/CountryInfo";
 import useFetch from "./AppLogic.js";
-import Error from "./Components/Error/Error";
+import Error from "./Pages/Error/Error";
 
-function App({ authorized }) {
+function App() {
   const { status } = useFetch();
 
   return (
