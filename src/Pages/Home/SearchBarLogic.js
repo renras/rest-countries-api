@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { appActions } from "../../../../Store/appSlice";
+import { appActions } from "../../Store/appSlice";
 
 const useFetch = () => {
   const text = useSelector((state) => state.app.value);

@@ -1,9 +1,9 @@
 import React from "react";
 
 import styles from "./CountryInfoContent.module.css";
-import CountryInfoLeftSection from "./Components/CountryInfoLeftSection/CountryInfoLeftSection";
-import CountryInfoRightSection from "./Components/CountryInfoRightSection/CountryInfoRightSection";
-import BorderCountries from "./Components/BorderCountries/BorderCountries";
+import CountryInfoLeftSection from "./CountryInfoLeftSection";
+import CountryInfoRightSection from "./CountryInfoRightSection";
+import BorderCountries from "./BorderCountries";
 
 const CountryInfoContent = ({
   currentCountry,

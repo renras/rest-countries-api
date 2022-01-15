@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { appActions } from "../../../../Store/appSlice";
+import { appActions } from "../../Store/appSlice";
 
 const useFetch = () => {
   const dispatch = useDispatch();

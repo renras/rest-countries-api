@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./Navbar.module.css";
-import ToggleDarkMode from "./Components/ToggleDarkMode/ToggleDarkMode";
+import ToggleDarkMode from "./ToggleDarkMode";
 
 const Navbar = () => {
   return (

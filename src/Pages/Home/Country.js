@@ -4,7 +4,7 @@ import styles from "./Country.module.css";
 import { Link } from "react-router-dom";
 import useFetch from "./CountryLogic";
 
-import SingleCountry from "./Components/SingleCountry";
+import SingleCountry from "./SingleCountry";
 
 const Country = () => {
   const { filteredCountries } = useFetch();

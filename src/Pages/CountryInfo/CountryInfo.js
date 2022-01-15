@@ -2,8 +2,8 @@ import React from "react";
 
 import styles from "./CountryInfo.module.css";
 import useFetch from "./CountryInfoLogic";
-import CountryInfoContent from "./Components/CountryInfoContent";
-import GoBack from "./Components/GoBack/GoBack";
+import CountryInfoContent from "./CountryInfoContent";
+import GoBack from "./GoBack";
 
 const CountryInfo = () => {
   const { currentCountry, getCurrencies, languages, borderCountries } =

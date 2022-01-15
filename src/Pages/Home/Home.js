@@ -1,9 +1,9 @@
 import React from "react";
 
-import Country from "./Components/Country/Country";
-import SearchBar from "./Components/SearchBar/SearchBar";
+import Country from "./Country";
+import SearchBar from "./SearchBar";
 import styles from "./Home.module.css";
-import RegionAccordion from "./Components/RegionAccordion/RegionAccordion";
+import RegionAccordion from "./RegionAccordion";
 
 const Home = () => {
   return (

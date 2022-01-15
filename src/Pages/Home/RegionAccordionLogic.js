@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import { regionAccordionActions } from "../../../../Store/regionAccordionSlice";
+import { regionAccordionActions } from "../../Store/regionAccordionSlice";
 import { useSelector, useDispatch } from "react-redux";
 
 const useFetch = () => {

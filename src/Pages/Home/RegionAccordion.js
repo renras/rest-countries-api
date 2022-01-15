@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./RegionAccordion.module.css";
 import { FaChevronDown } from "react-icons/fa";
 import useFetch from "./RegionAccordionLogic";
-import RegionAccordionContent from "./Components/RegionAccordionContent";
+import RegionAccordionContent from "./RegionAccordionContent";
 
 const RegionAccordion = () => {
   const {
