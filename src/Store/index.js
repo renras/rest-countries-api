@@ -8,7 +8,7 @@ import appReducer from "./appSlice";
 const store = configureStore({
   reducer: {
     app: appReducer,
-    navbarReducer: navbarReducer,
+    navbar: navbarReducer,
     regionAccordion: regionAccordionReducer,
   },
   middleware: [thunk],
