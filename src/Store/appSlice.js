@@ -16,6 +16,8 @@ const appSlice = createSlice({
     filteredCountries: [],
     searchBarText: "",
     borderCountries: [],
+    regions: [],
+    activeRegion: "Filter by Region",
   },
   reducers: {
     updateSearchBarText(state, action) {
@@ -40,7 +42,13 @@ const appSlice = createSlice({
     },
     setBorderCountries(state, action) {
       state.borderCountries = action.payload;
-      console.log(action.payload);
+    },
+    changeActiveRegion(state, action) {
+      state.activeRegion = action.payload;
+
+      if (action.payload === "None") {
+        state.activeRegion = "Filter by Region";
+      }
     },
   },
   extraReducers: {
@@ -51,6 +59,10 @@ const appSlice = createSlice({
       state.status = "success";
       state.countries = action.payload.data;
       state.filteredCountries = action.payload.data;
+      const regions = new Set();
+      state.countries.forEach((country) => regions.add(country.region));
+      regions.add("None");
+      state.regions = Array.from(regions);
     },
     [getCountries.rejected]: (state, action) => {
       state.status = "failed";

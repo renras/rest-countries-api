@@ -1,20 +1,15 @@
-import React from "react";
-
 import { FaSearch } from "react-icons/fa";
 import styles from "./SearchBar.module.css";
-import useFetch from "./SearchBarLogic";
 
-const SearchBar = () => {
-  const { text, handleChange } = useFetch();
-
+const SearchBar = ({ text, onChange, placeHolder }) => {
   return (
     <div className={styles.searchBar}>
       <FaSearch className={styles.searchIcon} />
       <input
         type="text"
-        placeholder="Search for a country..."
+        placeholder={placeHolder}
         value={text}
-        onChange={handleChange}
+        onChange={onChange}
       ></input>
     </div>
   );

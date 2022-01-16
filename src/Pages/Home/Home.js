@@ -1,21 +1,38 @@
 import React from "react";
 
-import Country from "./Country";
-import SearchBar from "./SearchBar";
+import Countries from "./Countries";
+import SearchBar from "../../Components/SearchBar/SearchBar";
 import styles from "./Home.module.css";
-import RegionAccordion from "./RegionAccordion";
+import DropdownMenu from "../../Components/DropdownMenu/DropdownMenu";
+import useHome from "./HomeLogic";
 
 const Home = () => {
+  const {
+    searchBarText,
+    regions,
+    activeRegion,
+    searchBarHandleChange,
+    changeActiveRegion,
+  } = useHome();
+
   return (
-    <section className={styles.home}>
+    <main className={styles.home}>
       <div className={styles.topOfSection}>
-        <SearchBar />
-        <RegionAccordion />
+        <SearchBar
+          searchBarText={searchBarText}
+          onChange={searchBarHandleChange}
+          placeHolder="Search for a country..."
+        />
+        <DropdownMenu
+          content={regions}
+          selectItemHandler={changeActiveRegion}
+          activeRegion={activeRegion}
+        />
       </div>
       <div className={styles.countries}>
-        <Country />
+        <Countries />
       </div>
-    </section>
+    </main>
   );
 };
 

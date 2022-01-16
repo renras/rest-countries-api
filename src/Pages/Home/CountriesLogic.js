@@ -2,13 +2,11 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { appActions } from "../../Store/appSlice";
 
-const useFetch = () => {
+const useCountries = () => {
   const dispatch = useDispatch();
   const searchBarText = useSelector((state) => state.app.searchBarText);
   const filteredCountries = useSelector((state) => state.app.filteredCountries);
-  const activeRegion = useSelector(
-    (state) => state.regionAccordion.activeRegion
-  );
+  const activeRegion = useSelector((state) => state.app.activeRegion);
 
   useEffect(() => {
     dispatch(appActions.filterCountries({ activeRegion, searchBarText }));
@@ -17,4 +15,4 @@ const useFetch = () => {
   return { filteredCountries, searchBarText };
 };
 
-export default useFetch;
+export default useCountries;
