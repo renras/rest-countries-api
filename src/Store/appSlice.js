@@ -42,7 +42,6 @@ const appSlice = createSlice({
     },
     setBorderCountries(state, action) {
       state.borderCountries = action.payload;
-      console.log(action.payload);
     },
     changeActiveRegion(state, action) {
       state.activeRegion = action.payload;

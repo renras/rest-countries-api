@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./BorderCountries.module.css";
 
@@ -12,7 +13,12 @@ const BorderCountries = ({ borderCountries }) => {
           </p>
           <ul>
             {borderCountries.map((borderCountry, index) => (
-              <li key={index}>{borderCountry.name}</li>
+              <li>
+                <Link key={index} to={`/country-info/${borderCountry.name}`}>
+                  {borderCountry.name}
+                </Link>
+              </li>
+              // <li key={index}>{borderCountry.name}</li>
             ))}
           </ul>
         </div>

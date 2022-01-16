@@ -27,3 +27,8 @@
   border: none;
   box-shadow: var(--shadow);
 }
+
+.country_info_footer li a {
+  text-decoration: none;
+  color: var(--text-white);
+}
