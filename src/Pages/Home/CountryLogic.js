@@ -6,9 +6,7 @@ const useFetch = () => {
   const dispatch = useDispatch();
   const searchBarText = useSelector((state) => state.app.searchBarText);
   const filteredCountries = useSelector((state) => state.app.filteredCountries);
-  const activeRegion = useSelector(
-    (state) => state.regionAccordion.activeRegion
-  );
+  const activeRegion = useSelector((state) => state.app.activeRegion);
 
   useEffect(() => {
     dispatch(appActions.filterCountries({ activeRegion, searchBarText }));
