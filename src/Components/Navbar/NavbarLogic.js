@@ -1,15 +1,15 @@
 import { useSelector, useDispatch } from "react-redux";
 import { toggleDarkModeActions } from "../../Store/toggleDarkModeSlice";
 
-const useFetch = () => {
+const useNavbarLogic = () => {
   const dispatch = useDispatch();
   const darkMode = useSelector((state) => state.toggleDarkMode.darkMode);
 
-  const toggleDarkMode = () => {
+  const themeToggler = () => {
     dispatch(toggleDarkModeActions.toggleDarkMode());
   };
 
-  return { darkMode, toggleDarkMode };
+  return { darkMode, themeToggler };
 };
 
-export default useFetch;
+export default useNavbarLogic;
