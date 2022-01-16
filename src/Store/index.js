@@ -1,14 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import thunk from "redux-thunk";
 
-import toggleDarkModeReducer from "./toggleDarkModeSlice";
+import navbarReducer from "./navbarSlice";
 import regionAccordionReducer from "./regionAccordionSlice";
 import appReducer from "./appSlice";
 
 const store = configureStore({
   reducer: {
     app: appReducer,
-    toggleDarkMode: toggleDarkModeReducer,
+    navbarReducer: navbarReducer,
     regionAccordion: regionAccordionReducer,
   },
   middleware: [thunk],

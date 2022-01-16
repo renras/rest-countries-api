@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialToggleDarkModeState = {
+const initialNavbarState = {
   darkMode: false,
 };
 
-const toggleDarkModeSlice = createSlice({
+const navbarSlice = createSlice({
   name: "navbar",
-  initialState: initialToggleDarkModeState,
+  initialState: initialNavbarState,
   reducers: {
     toggleDarkMode(state) {
       state.darkMode = !state.darkMode;
@@ -32,6 +32,6 @@ const toggleDarkModeSlice = createSlice({
   },
 });
 
-export const toggleDarkModeActions = toggleDarkModeSlice.actions;
+export const navbarActions = navbarSlice.actions;
 
-export default toggleDarkModeSlice.reducer;
+export default navbarSlice.reducer;
