@@ -1,26 +1,19 @@
 import React from "react";
 
-import Country from "./Country";
+import Countries from "./Countries";
 import SearchBar from "../../Components/SearchBar/SearchBar";
 import styles from "./Home.module.css";
 import DropdownMenu from "../../Components/DropdownMenu/DropdownMenu";
-import { useSelector, useDispatch } from "react-redux";
-import { appActions } from "../../Store/appSlice";
+import useHome from "./HomeLogic";
 
 const Home = () => {
-  const searchBarText = useSelector((state) => state.app.searchBarText);
-  const dispatch = useDispatch();
-  const regions = useSelector((state) => state.app.regions);
-
-  const activeRegion = useSelector((state) => state.app.activeRegion);
-
-  const searchBarHandleChange = (e) => {
-    dispatch(appActions.updateSearchBarText(e.target.value));
-  };
-
-  const changeActiveRegion = (region) => {
-    dispatch(appActions.changeActiveRegion(region));
-  };
+  const {
+    searchBarText,
+    regions,
+    activeRegion,
+    searchBarHandleChange,
+    changeActiveRegion,
+  } = useHome();
 
   return (
     <main className={styles.home}>
@@ -37,7 +30,7 @@ const Home = () => {
         />
       </div>
       <div className={styles.countries}>
-        <Country />
+        <Countries />
       </div>
     </main>
   );

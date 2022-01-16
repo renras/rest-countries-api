@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { appActions } from "../../Store/appSlice";
 
-const useFetch = () => {
+const useCountries = () => {
   const dispatch = useDispatch();
   const searchBarText = useSelector((state) => state.app.searchBarText);
   const filteredCountries = useSelector((state) => state.app.filteredCountries);
@@ -15,4 +15,4 @@ const useFetch = () => {
   return { filteredCountries, searchBarText };
 };
 
-export default useFetch;
+export default useCountries;

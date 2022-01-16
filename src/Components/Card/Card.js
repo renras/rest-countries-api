@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./SingleCountry.module.css";
+import styles from "./Card.module.css";
 
 const SingleCountry = ({ country }) => {
   return (
