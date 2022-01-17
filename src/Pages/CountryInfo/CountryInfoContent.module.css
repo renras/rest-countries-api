@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 100%;
   justify-content: center;
   font-size: 12.5px;
+  width: 100%;
 }
 
 .country_info h3 {
@@ -13,9 +13,29 @@
 
 .country_info_body {
   display: flex;
-  gap: 75px;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .country_info_body ul {
-  line-height: 20px;
+  line-height: 25px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 769px) {
+  .country_info_body {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .country_info {
+    margin-top: 36px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .country_info_body {
+    gap: 90px;
+  }
 }
