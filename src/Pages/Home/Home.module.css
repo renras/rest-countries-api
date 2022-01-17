@@ -12,9 +12,9 @@
 
 .countries {
   display: grid;
-  padding: 75px 0 20px 0;
+  padding: 24px 0;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, 250px);
   gap: 50px;
   overflow: hidden;
