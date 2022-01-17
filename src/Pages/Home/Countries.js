@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./Country.module.css";
+import styles from "./Countries.module.css";
 import { Link } from "react-router-dom";
 import useCountries from "./CountriesLogic";
 import Card from "../../Components/Card/Card";

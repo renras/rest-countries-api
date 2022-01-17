@@ -4,6 +4,7 @@
   padding: 17px 27px;
   align-items: center;
   width: 100%;
+  max-width: 379px;
   gap: 26px;
   border-radius: 5px;
   box-shadow: var(--shadow);

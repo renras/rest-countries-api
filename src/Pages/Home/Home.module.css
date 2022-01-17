@@ -2,11 +2,13 @@
   padding: 18px 12px;
   display: flex;
   flex-direction: column;
+  margin-inline: auto;
 }
 
 .topOfSection {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-flow: row wrap;
   gap: 33px;
 }
 
@@ -15,7 +17,24 @@
   padding: 24px 0;
   align-items: center;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, 250px);
-  gap: 50px;
+  grid-template-columns: repeat(auto-fit, 209px);
+  gap: 60px;
   overflow: hidden;
+}
+
+@media screen and (min-width: 507px) {
+  .countries {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 596px) {
+  .home {
+    padding: 37px 12px;
+    max-width: 1338px;
+  }
+
+  .countries {
+    padding: 35px 0;
+  }
 }
