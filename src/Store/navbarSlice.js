@@ -16,7 +16,7 @@ const navbarSlice = createSlice({
       );
       document.documentElement.style.setProperty(
         "--secondary-bg",
-        `${state.darkMode ? "#46535d" : "#fff"}`
+        `${state.darkMode ? "#2b3743" : "#fff"}`
       );
       document.documentElement.style.setProperty(
         "--text-white",

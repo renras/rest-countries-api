@@ -9,12 +9,14 @@ const Navbar = () => {
 
   return (
     <header className={styles.header}>
-      <h1>Where in the world?</h1>
-      <ThemeToggler
-        icon={darkMode ? <BsFillSunFill /> : <FaMoon />}
-        text={darkMode ? "Light Mode" : "Dark Mode"}
-        themeToggler={themeToggler}
-      />
+      <div className={styles.header_content}>
+        <h1>Where in the world?</h1>
+        <ThemeToggler
+          icon={!darkMode ? <BsFillSunFill /> : <FaMoon />}
+          text={!darkMode ? "Light Mode" : "Dark Mode"}
+          themeToggler={themeToggler}
+        />
+      </div>
     </header>
   );
 };
