@@ -10,7 +10,7 @@ const DropdownMenuContent = ({
   return (
     <div
       className={`${!showAccordion && styles.showAccordion} ${
-        styles.regionsContainer
+        styles.dropdownMenuContent
       }`}
     >
       <ul>

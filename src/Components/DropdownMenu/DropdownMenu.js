@@ -12,8 +12,8 @@ const RegionAccordion = ({ content, selectItemHandler, activeRegion }) => {
   };
 
   return (
-    <div className={styles.regionAccordion}>
-      <div className={styles.regionHeader} onClick={toggleAccordion}>
+    <div className={styles.dropdownMenu}>
+      <div className={styles.dropdownMenuHeader} onClick={toggleAccordion}>
         <p>{activeRegion}</p>
         <FaChevronDown className={styles.chevronDown} />
       </div>

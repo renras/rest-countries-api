@@ -1,20 +1,23 @@
-.regionAccordion {
-  font-size: 12.5px;
+.dropdownMenu {
+  font-size: 12px;
   background-color: var(--main-bg);
   color: var(--text-white);
-  letter-spacing: 0.5px;
   display: flex;
+  width: 160px;
   flex-direction: column;
   gap: 10px;
   position: relative;
 }
 
-.regionHeader {
+.dropdownMenu:hover {
+  cursor: pointer;
+}
+
+.dropdownMenuHeader {
   display: flex;
   justify-content: space-between;
   background-color: var(--secondary-bg);
-  padding: 12.5px 12.5px 12.5px 15px;
-  width: 150px;
+  padding: 17px 15px;
   border-radius: 5px;
   border: none;
   align-items: center;
@@ -22,29 +25,52 @@
   box-shadow: var(--shadow);
 }
 
+.dropdownMenuHeader p {
+  font-size: 12px;
+}
+
 .chevronDown {
   font-size: 10px;
 }
 
-.regionsContainer {
-  overflow: hidden;
+.dropdownMenuContent {
+  overflow: auto;
   position: absolute;
-  top: 50px;
+  top: 52px;
+  left: 0;
+  right: 0;
   box-shadow: var(--shadow);
+  height: 136px;
+  border-radius: 5px;
+  transition: height 0.5s;
 }
 
-.regionAccordion ul {
+/* Hide scrollbar for Chrome, Safari and Opera */
+.dropdownMenuContent::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+.dropdownMenuContent {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+.dropdownMenuContent ul {
   background-color: var(--secondary-bg);
   list-style: none;
-  width: 150px;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
 }
 
-.regionAccordion li {
-  padding: 10px 15px;
+.dropdownMenuContent li {
+  padding: 5px 17px;
+  font-size: 12px;
 }
 
-.regionAccordion li:hover {
+.dropdownMenuContent li:hover {
   background-color: var(--main-bg);
   cursor: pointer;
 }
